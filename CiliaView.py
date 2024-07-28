@@ -2,17 +2,19 @@ import streamlit as st
 import json
 from PIL import Image
 
+input_path = r"/home/z3541106/ondemand/CiliaView/Input_Files"
+
 # Load data
-with open('genes.json') as f:
+with open(input_path + 'genes.json') as f:
     genes_data = json.load(f)['genes']
 
-with open('structures.json') as f:
+with open(input_path + 'structures.json') as f:
     structures_data = json.load(f)['structures']
 
-with open('references.json') as f:
+with open(input_path + 'references.json') as f:
     references_data = json.load(f)['references']
 
-with open('patient_database.json') as f:
+with open(input_path + 'patient_database.json') as f:
     patient_data = json.load(f)['patients']
 
 
@@ -211,7 +213,7 @@ st.markdown(
 
 # Central area for the map
 st.title("Cilia Structure Map")
-map_image = Image.open("map.png")
+map_image = Image.open(input_path + "map.png")
 st.image(map_image, width=900, caption='')
 
 # Sidebar interaction for search
