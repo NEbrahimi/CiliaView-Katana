@@ -2,7 +2,7 @@ import streamlit as st
 import json
 from PIL import Image
 
-input_path = "$HOME/CiliaView/Input_Files/"
+input_path = "/srv/scratch/micf_waters/CiliaView/Input_Files/"
 
 # Load data
 with open(input_path + 'genes.json') as f:
